@@ -1,0 +1,20 @@
+server:
+  port: 8082
+eureka:
+  instance:
+    #服务主机名
+    hostname: localhost
+    #注册中心本身也是个服务
+  client:
+    #是否注册到注册中心设为true的话应对自我保护机制
+    register-with-eureka: false
+    #获取服务
+    fetch-registry: false
+    #服务的地址
+    service-url:
+      #hashmap里面的key
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #server:enable-self-preservation:false 这是停掉自我保护机制
+      #自我保护机制出现的阈值
+  server:
+    renewal-percent-threshold: 0.5
