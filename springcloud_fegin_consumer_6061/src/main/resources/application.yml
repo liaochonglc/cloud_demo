@@ -1,0 +1,9 @@
+server:
+  port: 6061
+spring:
+  application:
+    name: consumerfegin
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8083/eureka/
