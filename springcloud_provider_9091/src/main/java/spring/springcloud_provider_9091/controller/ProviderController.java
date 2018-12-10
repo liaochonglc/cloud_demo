@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProviderController {
     @Value("${server.port}")
     private String port;
-    @RequestMapping("/hello/{port}")
-    public String provider(@PathVariable("port") String message) {
+    @RequestMapping("/hello")
+    public String provider() {
         System.out.println("调用者获得提供者的本地端口"+port);
-        return "success";
+        return port+"--success";
     }
 }

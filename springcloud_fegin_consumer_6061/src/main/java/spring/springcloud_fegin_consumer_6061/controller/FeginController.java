@@ -14,6 +14,6 @@ public class FeginController {
     private IFeginService iFeginService;
     @RequestMapping("/fegin")
     public String hello(){
-        return  iFeginService.provider("张三");
+        return  iFeginService.provider();
     }
 }
