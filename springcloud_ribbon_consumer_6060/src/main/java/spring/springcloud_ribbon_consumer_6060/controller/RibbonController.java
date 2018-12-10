@@ -17,7 +17,7 @@ public class RibbonController {
     @RequestMapping("/hello")
     @HystrixCommand(fallbackMethod = "fallbackMethod")
     public String consumer() {
-        String result = restTemplate.getForObject("http://serverprovider/provider/hello/zahngsan", String.class);
+        String result = restTemplate.getForObject("http://serverprovider/provider/hello", String.class);
         return result;
     }
 

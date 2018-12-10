@@ -1,0 +1,19 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: zuul10000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8083/eureka/
+#路由规则
+zuul:
+  routes:
+    test1:
+      #url匹配地址
+      path: /test1/**
+      serviceId: serverprovider
+    test2:
+      path: /test2/**
+      serviceId: consumerfegin
