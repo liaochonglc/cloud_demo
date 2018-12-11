@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: myapplication
+      label: master
+      profile: provider2
+      uri: http://localhost:10086/
